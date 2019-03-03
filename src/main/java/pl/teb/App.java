@@ -3,12 +3,28 @@
  */
 package pl.teb;
 
+import com.google.gson.Gson;
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws Exception {
+//        System.out.println(new App().getGreeting());
+//
+//        HolBok czytaj = new HolBok();
+//        HolBok pisz = new HolBok();
+//        czytaj.readLinesFromFile("U:\\dev\\henri\\src\\main\\java\\pl\\teb\\App.java");
+//
+//        pisz.pisz("readmem.md");
+
+        ChairSerializer krzesla = new ChairSerializer();
+
+            krzesla.krzesla(new Chair("Biurowe",3,"tapicerowane"));
+
+           Chair krzesloEpokiWiktorianskiej = krzesla.unkrzeslo("{\"name\":\"Krzesło Epoki Wiktoriańskiej\",\"kolka\":3,\"siedzisko\":\"tapicerowane\"}");
+    System.out.println(krzesloEpokiWiktorianskiej.name);
+        }
+
     }
-}
