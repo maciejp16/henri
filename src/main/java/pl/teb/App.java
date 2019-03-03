@@ -19,12 +19,19 @@ public class App {
 //
 //        pisz.pisz("readmem.md");
 
-        ChairSerializer krzesla = new ChairSerializer();
+//        ChairSerializer krzesla = new ChairSerializer();
+//
+//            krzesla.krzesla(new Chair("Biurowe",3,"tapicerowane"));
+//
+//           Chair krzesloEpokiWiktorianskiej = krzesla.unkrzeslo("{\"name\":\"Krzesło Epoki Wiktoriańskiej\",\"kolka\":3,\"siedzisko\":\"tapicerowane\"}");
+//    System.out.println(krzesloEpokiWiktorianskiej.name);
 
-            krzesla.krzesla(new Chair("Biurowe",3,"tapicerowane"));
+      StartMany mlekoOdKrowJestZajebiaszcze = new StartMany();
 
-           Chair krzesloEpokiWiktorianskiej = krzesla.unkrzeslo("{\"name\":\"Krzesło Epoki Wiktoriańskiej\",\"kolka\":3,\"siedzisko\":\"tapicerowane\"}");
-    System.out.println(krzesloEpokiWiktorianskiej.name);
-        }
+      mlekoOdKrowJestZajebiaszcze.startManyWorkers(12);
+
+
+
+       }
 
     }
